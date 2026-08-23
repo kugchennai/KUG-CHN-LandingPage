@@ -332,8 +332,9 @@
     <!-- About & Objectives Modal Overlay -->
     <div id="about-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden transition-opacity">
         <div class="bg-kotlin-card border border-kotlin-cardBorder rounded-2xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden relative">
+            
             <!-- Modal Header -->
-            <div class="p-4 sm:p-5 border-b border-kotlin-cardBorder flex items-center justify-between bg-kotlin-dark/80">
+            <div class="p-4 sm:p-5 border-b border-kotlin-cardBorder flex items-center justify-between bg-kotlin-dark/80 shrink-0">
                 <div class="flex items-center gap-2.5 text-indigo-400">
                     <i data-lucide="target" class="w-6 h-6"></i>
                     <div>
@@ -346,75 +347,122 @@
                 </button>
             </div>
 
-            <!-- Modal Content (Objectives, Why Kotlin, Why KUG) -->
-            <div class="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <!-- Modal Body: Perfectly Structured Sections -->
+            <div class="p-5 sm:p-6 overflow-y-auto space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 
-                <!-- Objectives Section -->
-                <div class="space-y-2">
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-kotlin-purple flex items-center gap-1.5">
+                <!-- SECTION 1: OBJECTIVES OF THE USER GROUP -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-kotlin-purple flex items-center gap-1.5 pb-1 border-b border-slate-800">
                         <i data-lucide="target" class="w-4 h-4 text-kotlin-purple"></i>
                         Objectives of the User Group
                     </h3>
                     
-                    <div class="grid grid-cols-1 gap-2 text-xs">
-                        <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800">
-                            <h4 class="font-bold text-white mb-0.5 flex items-center gap-1">🤝 Community Building</h4>
-                            <p class="text-slate-400">Connecting Kotlin enthusiasts & providing networking opportunities in Chennai and across India.</p>
+                    <div class="grid grid-cols-1 gap-2.5">
+                        
+                        <!-- Objective 1: Community Building -->
+                        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-1 hover:border-slate-700 transition-all">
+                            <h4 class="font-bold text-white text-xs flex items-center gap-1.5 text-emerald-400">
+                                🤝 Community Building
+                            </h4>
+                            <ul class="list-disc pl-5 text-xs text-slate-300 space-y-0.5">
+                                <li>Connecting Kotlin enthusiasts</li>
+                                <li>Networking opportunities</li>
+                            </ul>
                         </div>
                         
-                        <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800">
-                            <h4 class="font-bold text-white mb-0.5 flex items-center gap-1">💡 Knowledge Sharing</h4>
-                            <p class="text-slate-400">Workshops, talks, meetups, best practices, and new developments.</p>
+                        <!-- Objective 2: Knowledge Sharing -->
+                        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-1 hover:border-slate-700 transition-all">
+                            <h4 class="font-bold text-white text-xs flex items-center gap-1.5 text-sky-400">
+                                💡 Knowledge Sharing
+                            </h4>
+                            <ul class="list-disc pl-5 text-xs text-slate-300 space-y-0.5">
+                                <li>Workshops, talks, and meetups</li>
+                                <li>Best practices and new developments</li>
+                            </ul>
                         </div>
 
-                        <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800">
-                            <h4 class="font-bold text-white mb-0.5 flex items-center gap-1">⚡ Collaboration</h4>
-                            <p class="text-slate-400">Open-source projects and collaborative learning.</p>
+                        <!-- Objective 3: Collaboration -->
+                        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-1 hover:border-slate-700 transition-all">
+                            <h4 class="font-bold text-white text-xs flex items-center gap-1.5 text-purple-400">
+                                ⚡ Collaboration
+                            </h4>
+                            <ul class="list-disc pl-5 text-xs text-slate-300 space-y-0.5">
+                                <li>Open-source projects and collaborative learning</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Why Kotlin Section -->
-                <div class="p-3.5 rounded-xl bg-pink-500/10 border border-pink-500/20 space-y-1.5">
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5">
-                        <i data-lucide="code" class="w-4 h-4 text-pink-400"></i>
+                <!-- SECTION 2: WHY KOTLIN? -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5 pb-1 border-b border-slate-800">
+                        <i data-lucide="code-2" class="w-4 h-4 text-pink-400"></i>
                         Why Kotlin?
                     </h3>
-                    <p class="text-xs text-slate-200 font-medium leading-relaxed">
-                        Android, KMP, Compose Multiplatform, Ktor (backend) and more! Modern, concise, safe, and interoperable for full-stack developer productivity.
-                    </p>
+                    
+                    <div class="p-4 rounded-xl bg-pink-500/10 border border-pink-500/20 space-y-2">
+                        <div class="flex items-center gap-2 text-xs font-bold text-pink-300">
+                            <span>🚀 Full-Stack Ecosystem</span>
+                        </div>
+                        <p class="text-xs text-slate-200 font-medium leading-relaxed">
+                            Android, KMP, Compose Multiplatform, Ktor (backend) and more!
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed pt-1 border-t border-pink-500/20">
+                            Modern, concise, safe, and interoperable for developer productivity across platforms.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Why KUG Section -->
-                <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-2">
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                <!-- SECTION 3: WHY A KOTLIN USER GROUP? -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5 pb-1 border-b border-slate-800">
                         <i data-lucide="compass" class="w-4 h-4 text-amber-400"></i>
                         Why a Kotlin User Group?
                     </h3>
-                    <ul class="space-y-1.5 text-xs text-slate-300 list-disc pl-4 leading-relaxed">
-                        <li>Help people dive deep into tech associated with Kotlin.</li>
-                        <li>Find enthusiasts who want to start with or have been using Kotlin.</li>
-                        <li>Do research on apps built with KMP and see how well it suits your use case.</li>
-                    </ul>
+                    
+                    <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                        <ul class="space-y-2 text-xs text-slate-200 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold shrink-0">✓</span>
+                                <span>Help people dive deep into tech associated with Kotlin</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold shrink-0">✓</span>
+                                <span>Find enthusiasts who want to start with or have been using Kotlin</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold shrink-0">✓</span>
+                                <span>Do research on apps built with KMP and see how well it might suit your use case</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Official Slack Direct Workspace Link -->
-                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
-                    <div class="flex items-center gap-2 text-slate-300">
-                        <span class="font-mono text-[11px] text-amber-400 font-bold">Kotlin Slack:</span>
-                        <span>kotlinlang.slack.com</span>
+                <!-- SECTION 4: KOTLIN SLACK COMMUNITY -->
+                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-3 text-xs">
+                    <div class="flex items-center gap-2.5 text-slate-300">
+                        <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/20 flex items-center justify-center shrink-0 text-amber-400">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white text-xs">Kotlin Slack Workspace</div>
+                            <div class="text-[11px] text-slate-400 font-mono">kotlinlang.slack.com</div>
+                        </div>
                     </div>
-                    <a href="https://kotlinlang.slack.com/" target="_blank" rel="noopener" class="text-kotlin-purple font-semibold hover:underline">Launch ➔</a>
+                    <a href="https://surveys.jetbrains.com/s3/kotlin-slack-sign-up" target="_blank" rel="noopener"
+                        class="px-3 py-1.5 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-300 font-bold text-xs hover:bg-amber-500/30 transition-all shrink-0">
+                        Join Slack ➔
+                    </a>
                 </div>
 
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 border-t border-kotlin-cardBorder bg-kotlin-dark/80 flex items-center justify-between text-xs">
+            <div class="p-4 border-t border-kotlin-cardBorder bg-kotlin-dark/80 flex items-center justify-between text-xs shrink-0">
                 <span class="text-slate-400 font-medium">Empowering Kotlin Developers in Chennai, India</span>
                 <button id="close-about-footer-btn" type="button"
                     class="px-4 py-2 rounded-xl gradient-bg text-white font-semibold hover:opacity-90 transition-opacity shadow-md">
-                    Got it!
+                    Close
                 </button>
             </div>
         </div>
@@ -424,7 +472,7 @@
     <div id="coc-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden transition-opacity">
         <div class="bg-kotlin-card border border-kotlin-cardBorder rounded-2xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden relative">
             <!-- Modal Header -->
-            <div class="p-4 sm:p-5 border-b border-kotlin-cardBorder flex items-center justify-between bg-kotlin-dark/80">
+            <div class="p-4 sm:p-5 border-b border-kotlin-cardBorder flex items-center justify-between bg-kotlin-dark/80 shrink-0">
                 <div class="flex items-center gap-2.5 text-purple-400">
                     <i data-lucide="shield-check" class="w-6 h-6"></i>
                     <div>
@@ -562,7 +610,7 @@
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 border-t border-kotlin-cardBorder bg-kotlin-dark/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div class="p-4 border-t border-kotlin-cardBorder bg-kotlin-dark/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs shrink-0">
                 <span class="text-slate-400 text-center sm:text-left font-medium">By participating in KUG Chennai, you agree to uphold this Code of Conduct.</span>
                 <button id="close-coc-footer-btn" type="button"
                     class="px-5 py-2 rounded-xl gradient-bg text-white font-semibold hover:opacity-90 transition-opacity text-center whitespace-nowrap shadow-md">
