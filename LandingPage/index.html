@@ -114,6 +114,23 @@
             -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
             mask-image: linear-gradient(to top, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
         }
+
+        /* Secondary event shortcut; kept outside the primary community links. */
+        .arcade-float {
+            position: fixed; right: 18px; bottom: 24px; z-index: 30;
+            display: flex; align-items: center; gap: 10px;
+            padding: 11px 14px; border: 1px solid #7F52FF80; border-radius: 14px;
+            background: #101422f5; color: #e2d9ff;
+            box-shadow: 0 6px 24px #0005; text-decoration: none;
+            transition: border-color .2s, background .2s;
+        }
+        .arcade-float:hover { border-color: #b49aff; background: #1B2030; }
+        .arcade-float:focus-visible { outline: 2px solid #b49aff; outline-offset: 4px; }
+        .arcade-float small { display: block; font-size: 10px; color: #a7a3ba; line-height: 1.4; }
+        .arcade-float strong { display: block; font-size: 12px; line-height: 1.5; }
+        @media (max-width: 640px) {
+            .arcade-float { right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); padding: 9px 12px; gap: 8px; }
+        }
     </style>
 </head>
 
@@ -602,6 +619,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Secondary floating event shortcut -->
+    <a id="arcade-link" class="arcade-float" href="https://driodcon26.kugchennai.org/" target="_blank" rel="noopener" aria-label="Play the KUG Chennai arcade at droidcon 2026 (opens a new tab)">
+        <i data-lucide="gamepad-2" class="w-5 h-5" aria-hidden="true"></i>
+        <span><small>droidcon ’26</small><strong>Play the arcade ↗</strong></span>
+    </a>
 
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-kotlin-card border border-kotlin-purple text-white px-4 py-2.5 rounded-full text-xs font-medium shadow-2xl flex items-center gap-2 hidden transition-all duration-300 z-50">
